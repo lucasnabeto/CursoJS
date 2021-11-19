@@ -1,0 +1,32 @@
+//Variáveis de ambiente:
+@host = http://localhost:3003
+@idProduto = 2
+
+//As requests devem ser separadas por meio da inserção desses 3 caracteres:
+###
+
+POST {{host}}/produtos
+Content-Type: application/x-www-form-urlencoded
+
+nome=TestePost
+&preco=2
+
+###
+
+GET {{host}}/produtos
+
+###
+
+GET {{host}}/produtos/{{idProduto}}
+
+###
+
+PUT {{host}}/produtos/{{idProduto}}
+Content-Type: application/x-www-form-urlencoded
+
+nome=TestePut
+&preco=1
+
+###
+
+DELETE {{host}}/produtos/{{idProduto}}

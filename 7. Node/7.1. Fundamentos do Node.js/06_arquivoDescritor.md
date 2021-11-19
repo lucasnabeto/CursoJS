@@ -11,3 +11,5 @@ As dependências dentro do arquivo "_package.json_" podem possuir permissões de
 ```
 
 Caso nenhum símbolo seja informado, a depêndencia deverá ser exatamente a versão especificada. Além disso, se houver um arquivo "_package-lock.json_", as versões das dependências especificadas nele sobrescreverão as especificadas pelo arquivo "_package.json_".
+
+Além das dependências, o arquivo descritor pode conter também scripts: ações que são executadas ao inserir no terminal o respectivo comando especificado no arquivo descritor. Os comandos "start" e "test" são predefinidos do _Node.js_, e, portanto, podem ser executados no terminal com "_npm start_" e "_npm test_", respectivamente. Já os comandos personalizados da aplicação devem ser executados no terminal como "_npm run <nome_do_comando>_".

@@ -1,0 +1,16 @@
+{
+  "name": "7.2.-api-com-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "12_servidor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
