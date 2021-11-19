@@ -9,7 +9,7 @@ if (anonimo) {
     //Aguarda a entrada das informações do usuário e escreve a mensagem personalizada:
     process.stdin.on("data", (data) => {
         const nome = data.toString().replace("\n", "");
-        process.stdout.write(`Olá, ${nome}!\n`);
+        process.stdout.write("Olá, " + nome + "!\n");
         process.exit(); //Encerra o processo.
     });
 }
