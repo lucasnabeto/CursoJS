@@ -28,7 +28,7 @@ let obterAlunos = async () => {
     const turmaB = await getTurma("B");
     const turmaC = await getTurma("C");
     return [].concat(turmaA, turmaB, turmaC);
-}; //Funções com "async" vão retornar sempre um objeto AsyncFunction, apesar do "return" especificar um array.
+}; //Funções com "async" vão retornar sempre uma "Promise".
 
 obterAlunos()
     .then((alunos) => alunos.map((a) => a.nome))

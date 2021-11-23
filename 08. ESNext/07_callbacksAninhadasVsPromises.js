@@ -1,5 +1,6 @@
 const http = require("http");
 
+//Usando "callback":
 const getTurmaCallback = (letra, callback) => {
     const url = `http://files.cod3r.com.br/curso-js/turma${letra}.json`;
     http.get(url, (res) => {
@@ -17,7 +18,7 @@ const getTurmaCallback = (letra, callback) => {
 
 let nomes = [];
 
-//Callback hell - Inferno de callback's:
+//Causa um problema de legibilidade do código conhecido como "callback hell (inferno de callback's)":
 getTurmaCallback("A", (alunos) => {
     nomes = nomes.concat(alunos.map((a) => `A: ${a.nome}`));
     getTurmaCallback("B", (alunos) => {
