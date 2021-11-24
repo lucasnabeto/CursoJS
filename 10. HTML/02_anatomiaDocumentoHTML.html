@@ -1,0 +1,61 @@
+<!--Para definir que um documento HTML deve ser interpretado pelo navegador como sendo a versão mais recente, chamada de HTML 5, é preciso informar apenas "html" na seguinte tag:-->
+<!DOCTYPE html>
+<!--Todo documento HTML deve ser envolto pela tag "html":-->
+<html lang="pt-BR">
+<!--A organização mais básica de um documento HTML é dividir em duas partes: "head" e "body".-->
+<!--O conteúdo presente no corpo da tag "head" define elementos não visuais da página, com exceção do título da página definido pela tag "title", como metadados, estilos e referências a arquivos externos:-->
+
+<head>
+    <!--Título da página (nome da aba no navegador):-->
+    <title>Anatomia de um documento HTML</title>
+    <!--Codificação da página:-->
+    <meta charset="UTF-8" />
+    <!--Referência a arquivo externo:-->
+    <link rel="stylesheet" href="style.css" />
+    <!--Estilo da página (ideal é sempre escrever em um arquivo CSS externo):-->
+    <style>
+        /*O conteúdo da tag "style" é escrito em CSS.*/
+        /*Tags são referenciadas diretamente:*/
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /*Identificadores são referenciadas com "#":*/
+        #textoPrincipal {
+            color: blueviolet;
+        }
+
+        /*Classes são referenciadas com ".":*/
+        .textoVermelho {
+            color: #f00;
+            /*É possível definir uma cor usando RGB explicitamente ou apenas escrevendo o nome da cor em inglês. Com RGB há um maior leque de possibilidades.*/
+        }
+
+        .textoNegrito {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<!--O conteúdo presente no corpo da tag "body" define os elementos visuais da página. Entretanto, é importante entender a semântica das tags HTML, isto é, saber qual a intenção de cada tag. Os posicionamentos e espaçamentos em si devem ser definidos por um arquivo CSS.-->
+
+<body>
+    <header>
+        <h1>Exemplo de HTML</h1>
+    </header>
+    <nav>
+        <a href="/">Navegação 1</a>
+    </nav>
+    <!--É possível referenciar elementos da página através dos atributos "id" e "class". O "id" deve ser algo único, ou seja, dois elementos não devem compartilhar o mesmo identificador. Já a classe pode ser compartilhada por vários elementos da página, bastando declarar o mesmo valor no atributo "class". Um mesmo elemento pode possuir mais de uma classe, sendo que as classes são separadas por espaços.-->
+    <section id="conteudoDaPagina">
+        <!--O atributo "style" permite a inserção de CSS diretamente no elemento:-->
+        <span id="textoPrincipal" style="font-style: italic">Texto 1</span><br>
+        <span class="textoNegrito textoVermelho">Texto 2</span><br>
+        <span class="textoVermelho">Texto 3</span>
+    </section>
+    <aside>Lateral</aside>
+    <footer id="rodape">Rodapé da Página</footer>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<h1>TAGS DE TABELA</h1>
+
+<!--As tabelas têm três partes principais: cabeçalho, corpo e rodapé.-->
+<table>
+    <!--O que a tabela representa:-->
+    <caption>Produtos</caption>
+    <!--Cabeçalho da tabela (table header):-->
+    <thead>
+        <!--Linha da tabela (table row):-->
+        <tr>
+            <!--Elementos de cabeçalho (table header element)-->
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+        </tr>
+    </thead>
+    <!--Corpo da tabela (table body):-->
+    <tbody>
+        <tr>
+            <!--Dados da tabela (table data):-->
+            <td>iPad</td>
+            <td>5.999,90</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Samsung Galaxy S8</td>
+            <td>1.800,00</td>
+            <td>10</td>
+        </tr>
+    </tbody>
+    <!--Rodapé da tabela (table footer):-->
+    <tfoot>
+        <tr>
+            <!--O atributo "colspan" mescla o número de colunas passado:-->
+            <td colspan="2" rowspan="2">Total</td>
+            <td rowspan="2">15</td>
+            <!--Existe também o atributo "rowspan" para mesclar o número de linhas passado.-->
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        /*Define o espaçamento:*/
+        padding: 10px;
+    }
+
+    thead tr {
+        /*Define uma borda inferior:*/
+        border-bottom: solid 3px #444;
+    }
+
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
