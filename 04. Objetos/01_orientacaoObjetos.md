@@ -1,4 +1,4 @@
-**CÓDIGO NÃO EXECUTÁVEL!!!**
+**ORIENTAÇÃO A OBJETOS**
 
 Existem 2 paradigmas dentro da programação estruturada:
 

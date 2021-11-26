@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+    <style>
+        input,
+        textarea,
+        select {
+            margin-bottom: 10px;
+            /*Empilha os elementos:*/
+            display: block;
+        }
+
+        /*É possível especificar um elemento através da união de sua tag com seu atributo:*/
+        input[type=radio],
+        input[type=checkbox] {
+            /*Alinha horizontalmente os elementos:*/
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulário</h1>
+    <!--Os formulários são delimitados pela tag "form" e os atributos "action" e "method" definem para onde irão as informações preenchidas quando o formulário for submetido:-->
+    <form action="http://localhost:3003/usuarios" method="POST">
+        Nome:
+        <!--A tag "input" define as entradas, enquanto o atributo "type" define o tipo dessa entrada e o atributo "name" informa ao backend qual é o dado do campo.-->
+        <!--Campo de texto:-->
+        <input type="text" name="nome">
+
+        Idade:
+        <input type="text" name="idade">
+
+        Biografia:
+        <!--A tag "textarea" delimita uma área de texto com o número de linhas e de colunas estipulados pelos atributos "rows" e "cols", respectivamente:-->
+        <textarea name="bio" rows="10" cols="30" placeholder="Fale mais sobre você..."></textarea>
+
+        Permissão:
+        <div>
+            <!--Opções de seleção única (radio button) - O atributo "checked" define qual opção é selecionada por padrão:-->
+            <input type="radio" name="permissao" value="administrador" checked>Admin
+            <input type="radio" name="permissao" value="regular">Regular
+        </div>
+
+        <div>
+            <!--Opções de seleção múltipla:-->
+            <input type="checkbox" name="ativo"> Usuário ativo
+        </div>
+
+        Estado:
+        <!--Lista de seleção única - O conteúdo do atributo "value" é o que realmente é enviado para o backend:-->
+        <select name="estado">
+            <option value="">Selecione</option>
+            <option value="es">Espírito Santo</option>
+            <option value="mg">Minas Gerais</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="sp">São Paulo</option>
+        </select>
+
+        Interesses:
+        <!--Lista de seleção múltipla:-->
+        <select name="interesses" multiple size="5">
+            <option value="css">CSS 3</option>
+            <option value="csharp">C#</option>
+            <option value="html">HTML 5</option>
+            <option value="java">Java</option>
+            <option value="js">JavaScript</option>
+            <option value="php">PHP</option>
+            <option value="python">Python</option>
+        </select>
+
+        <!--Botão para submeter o formulário - Também é possível informar os valores contidos em "action" e "method" da tag "form" diretamente no botão, através dos atributos "formaction" e "formmethod", respectivamente:-->
+        <button>Incluir</button>
+    </form>
+</body>
+
+</html>

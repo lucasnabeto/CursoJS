@@ -1,0 +1,35 @@
+<h1>TAGS DE MÍDIA</h1>
+
+<!--
+    Imagens e gif's:
+        src -> origem da imagem, podendo ser uma URL relativa ou absoluta
+        alt -> texto que aparece na tela caso a imagem quebre ou o usuário esteja usando um leitor de telas
+        width -> largura da imagem
+        height -> altura da imagem
+        title -> nome que aparece ao colocar o cursor do mouse sobre a imagem
+-->
+<img src="https://avatars.githubusercontent.com/u/34293441?v=4" alt="Avatar do Github" width="400" height="400"
+    title="Avatar do Github">
+
+<!--Com a tag "picture", é possível inserir diversas opções de imagem. As imagens são percorridas uma de cada vez, validando qual é a primeira que satisfaz o que foi definido pelo atributo "media". A primeira que satisfizer o atributo, será exibida na tela:-->
+<picture>
+    <source srcset="https://pbs.twimg.com/profile_images/1462772682748010497/K6QR3aGQ_400x400.jpg"
+        alt="Primeira opção de imagem" media="(min-width: 2000px)">
+    <source srcset="https://pbs.twimg.com/profile_images/1278344911847223297/k1ginRMI_400x400.jpg"
+        alt="Segunda opção de imagem" media="(min-width: 200px)">
+    <img src="https://avatars.githubusercontent.com/u/34293441?v=4" alt="Opção padrão de imagem" width="400"
+        height="400">
+</picture>
+
+<!--
+    Vídeo:
+        controls -> exibe os botões de controle do vídeo, como "play", "pause", "volume", etc
+        autoplay -> o vídeo inicia automaticamente ao carregar a página
+        controlsList -> remove os controles especificados
+-->
+<video id="video" width="800" height="450" style="display: block;" controls autoplay
+    controlsList="nodownload nofullscreen noremoteplayback">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+</video>
+<!--Proíbe que o usuário clique com o botão direito do mouse em cima do vídeo, impedindo que ele realize o download do vídeo:-->
+<script>document.getElementById("video").oncontextmenu = () => false</script>
