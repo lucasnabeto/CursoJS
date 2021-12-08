@@ -1,0 +1,60 @@
+<!--O box model está presente em quase todos os elementos do HTML. Ele é composto por conteúdo, padding, borda (border) e margem (margin). O padding faz parte das dimensões do elemento, definindo a distância entre conteúdo e borda, enquanto que o margin é a distância do elemento para um outro elemento externo.-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Box Model</title>
+    <style>
+        body {
+            font-size: 80px;
+        }
+
+        .c1 {
+            background-color: orange;
+        }
+
+        .c2 {
+            background-color: skyblue;
+        }
+
+        .c3 {
+            background-color: tomato;
+        }
+
+        div {
+            float: left;
+
+            /*Aplica 100px de espaçamento entre o conteúdo e cada uma das bordas do elemento:*/
+            padding-top: 100px;
+            padding-right: 100px;
+            padding-left: 100px;
+            padding-bottom: 100px;
+
+            /*Aplica diretamente 10px, 50px, 100px e 150px de espaçamento entre o conteúdo e as bordas superior, direita, inferior e esquerda, respectivamente (sempre no sentido horário):*/
+            padding: 10px 50px 100px 150px;
+
+            /*Aplica diretamente 20px, 40px e 20px de espaçamento entre o conteúdo e as bordas superior, laterais e inferior, respectivamente:*/
+            padding: 20px 40px 20px;
+
+            /*Aplica diretamente 100px de espaçamento entre o conteúdo e as bordas superior e inferior e 50px entre conteúdo e as bordas laterais:*/
+            padding: 100px 50px;
+
+            /*Aplica diretamente 50px de espaçamento entre o conteúdo e a borda inteira:*/
+            padding: 50px;
+
+            /*Aplica diretamente 0px de espaçamento entre outro elemento e as bordas superior e inferior e 20px entre outro elemento e as bordas laterais:*/
+            margin: 0px 20px;
+
+            /*Exibe a borda do elemento de forma tracejada, com 5px de espessura e na cor preta:*/
+            border: dashed 5px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">1</div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+</body>
+
+</html>

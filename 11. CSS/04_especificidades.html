@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <style>
+        /*
+        Ordem de prioridade:
+            1. Regra com !important (o ideal é evitar esse tipo de regra)
+            2. Seletores mais específicos
+                2.1. CSS inline
+                2.2. ID's
+                2.3. Classes, pseudo-classes e atributos
+                2.4. Elementos e pseudo-elementos
+            3. Última regra processada
+        */
+
+        p {
+            background-color: #AAA;
+        }
+
+        /*A cor de fundo será sobrescrita pois o seletor é mais específico (classe > tag):*/
+        .observacao {
+            background-color: #5F5;
+            border: dashed 5px;
+            padding: 200px !important;
+            font-size: 40px;
+        }
+
+        /*Apesar desse seletor ser mais específico do que os dois anteriores (tag + classe > tag || classe), o "padding" não será sobrescrito porque ele foi definido como "!important" em outro seletor:*/
+        p.observacao {
+            padding: 2px;
+            background: linear-gradient(to right, red, yellow);
+        }
+    </style>
+</head>
+
+<body>
+    <p class="observacao">
+        Conteúdo
+    </p>
+</body>
+
+</html>

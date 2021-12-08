@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!--O Google Fonts fornece fontes criadas por terceiros:-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+    <style>
+        /*Existem atributos que são passados automaticamente por herança e outros que não são. Herança significa que um elemento filho recebe atributos de seu elemento pai.*/
+        body {
+            /*Passam automaticamente por herança:*/
+            font-family: 'Raleway', sans-serif;
+            font-size: 40px;
+            /*Não passam automaticamente por herança:*/
+            border: solid 3px red;
+            padding: 50px;
+        }
+
+        /*É possível forçar a utilização de herança, especificando o atributo que se quer herdar junto do valor "inherit", da seguinte forma:*/
+        div {
+            border: inherit;
+            padding: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Herança</h1>
+    <div>Estou herdando</div>
+</body>
+
+</html>

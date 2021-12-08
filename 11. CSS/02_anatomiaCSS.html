@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <!--É possível utilizar CSS internamente em um documento HTML:-->
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        /*Definindo estilo de uma classe:*/
+        .seletor {
+            /*Alguns atributos possuem valores personalizáveis:*/
+            color: #fff;
+            font-size: 30px;
+            /*Outros atributos possuem valores predefinidos:*/
+            text-align: center;
+            /*Shorthand property - permite atribuir diversas propriedades simultaneamente a um elemento:*/
+            border: solid 5px navy;
+            font-family: Helvetica, sans-serif;
+            /*O CSS possui algumas funções predefinidas também:*/
+            width: calc(100% - 40px);
+            background-color: rgb(34, 153, 189);
+        }
+
+        /*Definindo estilo de uma pseudo-classe:*/
+        .seletor:hover {
+            /*As propriedades definidas na pseudo-classe "hover" são aplicadas quando o cursor do mouse passa sobre o elemento.*/
+            background-color: orangered;
+        }
+
+        /*Definindo estilo de um pseudo-elemento:*/
+        .seletor::first-letter {
+            font-size: 40px;
+            font-weight: bold;
+        }
+    </style>
+    <!--Também é possível utilizar CSS a partir de um arquivo externo:-->
+    <link rel="stylesheet" href="02_cssExterno.css">
+
+    <!--IMPORTANTE: Quando há mais de uma fonte, interna e/ou externa, determinando o estilo de um elemento, prevalecerá a declarada por último!-->
+</head>
+
+<!--Por fim, a terceira e última forma de usar CSS é a forma "inline", em que o estilo é aplicado através da propriedade "style" de uma tag HTML:-->
+
+<body style="background-color: coral;">
+    <div class="seletor">Conteúdo</div>
+</body>
+<!--Um estilo atribuído "inline" SEMPRE prevalecerá sobre estilos definidos interna ou externamente. Entretanto, a forma "inline" não é uma boa prática. O ideal é usar arquivos externos sempre que possível.-->
+
+</html>
