@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Overflow</title>
+    <style>
+        /*Por padrão, sempre que o conteúdo extrapola o tamanho do elemento, ele é exibido mesmo assim, causando a impressão de "layout quebrado". A propriedade "overflow" serve para determinar o que fazer nessas situações:*/
+        div.overflow {
+            font-size: 40px;
+            height: 100px;
+            width: 260px;
+            border: solid 3px;
+
+            /*Oculta tudo que extrapola o elemento:*/
+            overflow: hidden;
+
+            /*Exibe scroll's horizontal e vertical, caso necessário, para que se possa manter todo o conteúdo do elemento:*/
+            overflow: scroll;
+
+            /*Também é possível utilizar o overflow de forma específica para o eixo horizontal (x) e/ou para o eixo vertical (y):*/
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overflow">
+        Tudo funciona muito bem em CSS!!!
+        Texto muito grande para caber nessa "div".
+        Qual é o comportamento padrão?
+    </div>
+</body>
+
+</html>

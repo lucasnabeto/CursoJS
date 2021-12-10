@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Float</title>
+    <style>
+        div {
+            height: 150px;
+            width: 150px;
+        }
+
+        .c1 {
+            background-color: rgba(220, 08, 09, 0.5);
+            /*O elemento flutua no lado direito:*/
+            float: right;
+        }
+
+        .c2 {
+            background-color: green;
+
+            /*Impede o elemento de ficar na mesma linha que um elemento flutuante à direita:*/
+            clear: left;
+
+            /*Impede o elemento de ficar na mesma linha que um elemento flutuante à esquerda:*/
+            clear: right;
+
+            /*Impede o elemento de ficar na mesma linha que um elemento flutuante, independente de ser à direita ou à esquerda:*/
+            clear: both;
+        }
+
+        .c3 {
+            background-color: blue;
+        }
+
+        .c4 {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+</body>
+
+</html>
