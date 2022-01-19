@@ -1,0 +1,36 @@
+<!--O ideal é sempre utilizar unidades relativas (viewport e font), pois elas se adequam melhor ao navegador do usuário.-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Unidades</title>
+    <style>
+        .unidades-absolutas {
+            position: absolute;
+            font-size: 40px;
+            padding: 20px;
+            border: solid 5px #222;
+            margin: 30px;
+            top: 150px;
+            left: 200px;
+
+            /*Unidades pouco usadas:*/
+            width: 4cm;
+            height: 20mm;
+        }
+
+        .unidades-relativas {
+            position: absolute;
+            font-size: 4em;
+            padding: 5%;
+            border: solid 1vw #222;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="unidades-absolutas">Absoluta</div>
+    <div class="unidades-relativas">Relativa</div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Caneta BIC preta",
+            "price": 1.8
+        },
+        {
+            "id": 2,
+            "name": "Lápis de cor da Faber-Castell",
+            "price": 34.9
+        },
+        {
+            "id": 3,
+            "name": "Celular Samsung Galaxy S8",
+            "price": 1800.99
+        },
+        {
+            "id": 4,
+            "name": "Tablet Samsung Galaxy Tab S6",
+            "price": 3600.9
+        }
+    ]
+}

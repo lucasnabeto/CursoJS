@@ -1,0 +1,27 @@
+@host = http://localhost:3001
+@idProduto = 2
+
+POST {{host}}/products
+Content-Type: application/json
+
+{
+    "name": "Tablet Samsung Galaxy Tab S6",
+    "price": 3600.9
+}
+
+###
+
+GET {{host}}/products
+
+###
+
+GET {{host}}/products/{{idProduto}}
+
+###
+
+PATCH {{host}}/products/{{idProduto}}
+Content-Type: application/json
+
+{
+    "price": 34.9
+}
